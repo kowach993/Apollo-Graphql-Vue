@@ -1,0 +1,12 @@
+query ships($limit: Int!, $type: String) {
+  ships(limit: $limit, find:{type: $type}) {
+    image
+    id
+    model
+    weight_kg
+    year_built
+    weight_lbs
+    type
+    name
+  }
+}

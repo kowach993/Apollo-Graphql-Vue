@@ -1,0 +1,7 @@
+query missions($limit: Int!) {
+    missions(limit: $limit) {
+      id
+      name
+      website
+    }
+}
