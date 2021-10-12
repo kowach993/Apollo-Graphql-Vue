@@ -1,0 +1,1 @@
+/api/* http://api.spacex.land/graphql/:splat 200!
