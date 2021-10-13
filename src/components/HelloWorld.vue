@@ -21,12 +21,16 @@
               <p>Weight lbs</p>
             </div>
             <div class="ship_container" v-for="ship in data.ships" :key="ship.id">
-              <div><img :src="ship.image"></div>
+              <div><img v-if="ship.image" :src="ship.image">
+              <img v-else src="../images/noimage.png" alt=""></div>
               <p>{{ship.name}}</p>
               <p>{{ship.type}}</p>
-              <p>{{ship.weight_kg}}</p>
-              <p>{{ship.year_built}}</p>
-              <p>{{ship.weight_lbs}}</p>
+              <p v-if="ship.weight_kg">{{ship.weight_kg}}</p>
+              <p v-else>/</p>
+              <p v-if="ship.year_built">{{ship.year_built}}</p>
+              <p v-else>/</p>
+              <p v-if="ship.weight_lbs">{{ship.weight_lbs}}</p>
+              <p v-else>/</p>
             </div>
             </div>
           </div>
